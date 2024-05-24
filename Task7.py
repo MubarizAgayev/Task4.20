@@ -10,10 +10,9 @@ driver = webdriver.Chrome(service=service, options=options)
 driver.maximize_window
 driver.maximize_window()
 driver.get("https://userinyerface.com/game.html")
-block = driver.find_element(By.CSS_SELECTOR, '#app .game .cookies')
-# Bloğun yüksekliğini kontrol et
+time.sleep(30)
+block = driver.find_element(By.CSS_SELECTOR, 'div.cookies')
 block_height = block.size['height']
-print(f"Blok yüksekliği: {block_height}px")
-# Bloğun arka plan rengini kontrol et
+print(f"Blok hündürlüyü: {block_height}px")
 block_background_color = block.value_of_css_property('background-color')
-print(f"Bloğun arka plan rengi: {block_background_color}")
+print(f"Bloğun arxa fon rengi: {block_background_color}")
